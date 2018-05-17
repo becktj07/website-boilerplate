@@ -1,0 +1,78 @@
+﻿//Mixin for image replacement using "improved NIR" method http://css-tricks.com/examples/ImageReplacement/
+@mixin ir($width, $height, $url) {
+    width: $width;
+    height: $height;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+        content: url($url);
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+@mixin gradient-vertical($start-color: #564940, $end-color: #423931, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+
+@mixin box-sizing {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin drop-shadow ($horoffset: 0, $veroffset: 0, $blur: 5px, $spread: 5px, $color: $mediumNeutral) {
+    -moz-box-shadow: $horoffset $veroffset $blur $spread $color;
+    -webkit-box-shadow: $horoffset $veroffset $blur $spread $color;
+    box-shadow: $horoffset $veroffset $blur $spread $color;
+}
+
+@mixin text-shadow {
+    text-shadow: 3px 3px 2px #000;
+}
+
+
+@mixin no-select {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin visually-hidden-off {
+    position: static;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+}
+
+@mixin letter-spacing($letterspacing) {
+    letter-spacing: ($letterspacing/1000)*1em;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}

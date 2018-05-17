@@ -1,0 +1,27 @@
+﻿
+.back-to-top {
+    position: fixed;
+    bottom:8px;
+    right: 10px;
+    width: 42px;
+    height: 35px;
+    z-index: 999;
+
+    @media #{$mq-large} {
+        position: absolute;
+        top: -125px; 
+        right: 25px;
+    }
+}
+
+.back-to-top__link {
+    width: 42px;
+    height: 35px;
+    display: block;
+    padding: 3px;
+    z-index: 999;
+
+    img {
+        z-index: 999;
+    }
+}

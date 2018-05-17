@@ -1,0 +1,353 @@
+﻿
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Remove text-shadow in selection highlight */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* A better looking default horizontal rule */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Remove the gap between audio, canvas, iframes,images, videos and the bottom of their containers */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/* Remove default fieldset styles */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Allow only vertical resizing of textareas */
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h1 {
+    font-size:$font-size-small;
+    color: green!important;
+}
+
+body {
+    color: $body-font-color;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+    font-family:$body-font;
+
+    @media #{$mq-medium} {
+        line-height: 1.5em;
+    }
+
+    @media #{$mq-large} {
+        line-height: 1.7em;
+    }
+}
+
+.grey-background {
+    background-color:$neutral;
+}
+
+h1 {
+    display: block;
+    font-size:$font-size-large;
+    margin:0;
+}
+
+h2 {
+    display: block;
+    font-size:$font-size-medium;
+    margin:0;
+    color:$primary;
+}
+
+h3 {
+    display: block;
+    font-size:$font-size-medium;
+    margin: 0 0 1em 0;
+    color: $primary;
+}
+
+ul {
+    font-size:15px;
+    margin:0 0 1em 0;
+}
+
+li {
+    line-height:1.6em;
+
+    @media #{$mq-medium} {
+        line-height: 1.7em;
+    }
+
+    @media #{$mq-large} {
+        line-height: 1.9em;
+    }
+}
+
+a { 
+    color:$secondary;
+    text-decoration:none;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight:normal;
+    cursor: pointer;
+
+    &:hover {
+        color:$darkSecondary;
+        text-decoration:underline;
+    }
+}
+
+a, a:hover, a:active, a:focus {
+    outline: 0;
+}
+
+picture {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.button-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    height: 37px;
+    margin-top: 40px;
+}
+
+.cta-button {
+    @include box-sizing;
+    font-size:$font-size-button;
+    background-color: $secondary;
+    color: #ffffff;
+    line-height: 1em;
+    padding: 8px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 37px;
+    /*-webkit-transition: background-color .05s linear;
+    -moz-transition: background-color .05s linear;
+    -o-transition: background-color .05s linear;
+    -ms-transition: background-color .05s linear;
+    transition: background-color .05s linear;*/
+
+    &:hover {
+        background-color: $darkSecondary;
+        color: #ffffff;
+        text-decoration: none;
+        -webkit-transition: background-color .05s linear;
+        -moz-transition: background-color .05s linear;
+        -o-transition: background-color .05s linear;
+        -ms-transition: background-color .05s linear;
+        transition: background-color .05s linear;
+    }
+}
+
+.image-contain {
+    max-width: 100%;
+    clear: none;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+//Flexbox Classes
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    -webkit-order: 0;
+    order: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screen readers, but maintain layout */
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media print,
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

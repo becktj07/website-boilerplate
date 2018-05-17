@@ -1,0 +1,31 @@
+﻿
+/*Wrappers*/
+$wrapper-width: 1040px; //This is the max-width attribute of the wrapper per breakpoint.
+$wrapper-padding: 0 20px; //The gutter pixel amount of the wrapper
+
+//Constrains page content to $wrapper-width - $wrapper-padding
+.wrapper {
+    @include box-sizing;
+    @extend .clearfix;
+    position: relative;
+    width: 100%;
+    padding: $wrapper-padding;
+    max-width: $wrapper-width;
+    margin: 0 auto;
+
+    @media #{$mq-large} {
+
+    }
+}
+
+//100% of screen
+.full-screen-width {
+    @include box-sizing;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media #{$mq-large} {
+
+    }
+}

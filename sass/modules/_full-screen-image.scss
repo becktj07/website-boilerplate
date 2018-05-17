@@ -1,0 +1,49 @@
+﻿
+.full-screen-image {
+    @extend .clearfix;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.full-screen-image__logo-overlay {
+    position: absolute;
+    @include centerer;
+    width: 220px;
+    height: 37px;
+
+    @media #{$mq-medium} {
+        width: 280px;
+        height: auto;
+    }
+
+    @media #{$mq-large} {
+        width: 370px;
+    }
+}
+
+.image-contain--full-screen-image {
+    @extend .image-contain;
+    width: 100%;
+}
+
+.full-screen-image__text-overlay {
+    position: absolute;
+    @include centerer;
+
+    @media #{$mq-medium} {
+        height: auto;
+    }
+
+    h1 {
+        color:#ffffff;
+        text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+        font-weight: normal;
+        font-size: $font-size-large;
+        text-transform: uppercase;
+    }
+}

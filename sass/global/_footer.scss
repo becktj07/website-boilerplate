@@ -1,0 +1,125 @@
+﻿
+.footer {
+    width: 100%;
+    padding: 50px 0 20px 0;
+    background-color: $secondary;
+    color: #fff;
+
+    @media #{$mq-large} {
+        padding: 70px 0 55px 0;
+    }
+}
+
+.footer__inner {
+    @extend .wrapper;
+    position: relative;
+    padding: 0;
+
+    @media #{$mq-large} {
+       padding: 0;
+    }
+}
+
+.footer-links__list {
+    font-size: $font-size-small;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links__item {
+    display: block;
+
+    @media #{$mq-large} {
+       display: inline-block;
+    }
+}
+
+.footer-links__link {
+    color:#fff;;
+    text-decoration: none;
+    font-size: $font-size-small;
+    margin: 0;
+    line-height: 2em;
+
+    @media #{$mq-large} {
+        margin: 0 28px 0 0;
+        line-height: 1em;
+    }
+
+    &:hover {
+        color: $neutral;
+        text-decoration: none;
+    }
+}
+
+.footer-logo {
+    width: 216px;
+    height: 36px;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    position: relative;
+    right: 8px;
+        
+    @media #{$mq-large} {
+        margin: 60px auto 0 auto;
+        right: 10px;
+        width: 216px;
+        height: 36px;
+    }
+}
+
+.footer-address {
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: $font-size-small;
+    font-style: normal;
+
+
+    a {
+        color: #fff!important; // for iOS devices 
+        font-size:$font-size-small!important; // for iOS devices 
+    }
+}
+
+.footer-social-icons__list {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    margin: 35px auto 0 auto;
+    padding: 0;
+    width: 100%;
+
+    @media #{$mq-large} {
+       margin: 40px auto 0 auto;
+    }
+}
+
+.footer-social-icons__item {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+
+    &:hover {
+        color: $neutral;
+    }
+}
+
+#icon-facebook, #icon-twitter, #icon-linkedin {
+    fill: #fff;
+}
+
+svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
+    fill: $neutral;
+}
+
+.footer-social-icons__item--facebook, .footer-social-icons__item--twitter, .footer-social-icons__item--linkedin {
+    @extend .footer-social-icons__item;
+}
+
+.footer-copyright {
+    text-align: center;
+}

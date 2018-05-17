@@ -1,0 +1,34 @@
+﻿/* Breakpoints */
+$mq-xsmall: "only screen and (min-width:400px)";
+$mq-small-width: 400px;
+$mq-small: "only screen and (min-width:480px)";
+$mq-small-width: 480px;
+$mq-medium: "only screen and (min-width:768px)";
+$mq-medium-width: 768px;
+$mq-large: "only screen and (min-width:980px)";
+$mq-large-width: 980px;
+
+// To use... @media #{variable}
+
+/* Colors */
+$neutral: #808080;
+$darkNeutral: #808081;
+$primary: #e2e2e2; //Primary Brand Color
+$lightPrimary:#d9d9d9;
+$darkPrimary:#ff0000;
+$secondary: #949599; //Brand Secondary
+$lightSecondary:#d9d9d9;
+$darkSecondary:#000;
+$body-font-color: #000;
+
+/* fonts */
+$body-font: 'Roboto', Arial, sans-serif;
+$heading-font: Helvetica, Arial, sans-serif;
+
+/*font-sizes*/
+$font-size-xsmall:12px;
+$font-size-small:14px;
+$font-size-medium:18px;
+$font-size-large:24px;
+$font-size-xlarge:36px;
+$font-size-button:18px;

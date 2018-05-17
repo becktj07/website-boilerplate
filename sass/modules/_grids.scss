@@ -1,0 +1,71 @@
+.grid-centerer {
+
+  @media #{$mq-small} {
+    margin: 0 -10px;
+  }
+}
+
+.grid-wrapper {
+  @extend .wrapper;
+  @extend .flex-container;
+  max-width: 1060px;
+}
+
+.grid-image-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-item {
+  @include box-sizing;
+  flex-basis: 100%;
+  padding: 0 10px 10px 0;
+}
+
+/*-----------------------------
+ Two Columns
+ ------------------------------*/
+
+.two-col-item {
+  @extend .grid-item;
+
+  @media #{$mq-small} {
+    padding: 10px;
+    flex-basis: 50%;
+  }
+}
+
+/*-----------------------------
+ Three Columns
+ ------------------------------*/
+
+.three-col-item {
+  @extend .grid-item;
+
+  @media #{$mq-small} {
+    padding: 10px;
+    flex-basis: 50%;
+  }
+  @media #{$mq-medium} {
+    flex-basis: 33.333%;
+  }
+}
+
+/*-----------------------------
+ Four Columns
+ ------------------------------*/
+
+.four-col-item {
+  @extend .grid-item;
+
+  @media #{$mq-small} {
+    padding: 10px;
+    flex-basis: 50%;
+  }
+  @media #{$mq-medium} {
+    flex-basis: 33.333%;
+  }
+  @media #{$mq-large} {
+    flex-basis: 25%;
+  }
+}

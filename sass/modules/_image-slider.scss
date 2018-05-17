@@ -1,0 +1,10 @@
+
+.image-slider {
+  @extend .wrapper;
+}
+
+.image-slider__slide {
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
